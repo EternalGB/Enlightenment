@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public abstract class Board<T> where T : IPiece
+public class Board<T> where T : IPiece
 {
 	
 	protected int width, height;
@@ -16,6 +16,11 @@ public abstract class Board<T> where T : IPiece
 		this.width = width;
 		this.height = height;
 		pieces = new T[width,height];
+		for(int x = 0; x < width; x++) {
+			for(int y = 0; y < height; y++) {
+				pieces[x,y] = default(T);
+			}
+		}
 	}
 
 	public T GetPiece(int x, int y)
@@ -41,7 +46,7 @@ public abstract class Board<T> where T : IPiece
 
 	public bool PieceExistsAt(int x, int y)
 	{
-		return IsValidSpace(x,y) && pieces[x,y] != null;
+		return IsValidSpace(x,y) && !pieces[x,y].Equals(default(T));
 	}
 
 	public int Distance(int x1, int y1, int x2, int y2)

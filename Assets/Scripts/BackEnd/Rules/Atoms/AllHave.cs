@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 public class AllHave<T> : INode<T> where T : IPiece
 {
@@ -18,6 +19,8 @@ public class AllHave<T> : INode<T> where T : IPiece
 			for(int y = 0; y < board.Height; y++) {
 				if(board.PieceExistsAt(x,y)) {
 					result = result && board.PieceHas(x,y,propertyCheck);
+					if(!board.PieceHas(x,y,propertyCheck))
+						Debug.Log ("Piece at " + x + ", " + y + " does not have property " + propertyCheck.Method.Name);
 				}
 			}
 		}
