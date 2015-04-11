@@ -17,9 +17,9 @@ public class DieTest : MonoBehaviour
 		Rule<DiePiece> rule1 = new Rule<DiePiece>(new AllHave<DiePiece>(DiePiecePropertyCheckers.IsWhite));
 		Rule<DiePiece> rule2 = new Rule<DiePiece>(new ExistsOneHas<DiePiece>(DiePiecePropertyCheckers.IsBlack));
 		Rule<DiePiece> rule3 = new Rule<DiePiece>(new NoneHave<DiePiece>(DiePiecePropertyCheckers.IsBlack));
-		Rule<DiePiece> rule4 = new Rule<DiePiece>(new PropertyCount<DiePiece>(DiePiecePropertyCheckers.IsOne, (count, amount) => count == amount, 3));
-		Rule<DiePiece> rule5 = new Rule<DiePiece>(new PropertyCount<DiePiece>(DiePiecePropertyCheckers.IsOne, (count, amount) => count < amount, 3));
-		Rule<DiePiece> rule6 = new Rule<DiePiece>(new FaceSum((count, amount) => count >= amount,6));
+		Rule<DiePiece> rule4 = new Rule<DiePiece>(new PropertyCount<DiePiece>(DiePiecePropertyCheckers.IsOne, Comparers<int>.Equal, 3));
+		Rule<DiePiece> rule5 = new Rule<DiePiece>(new PropertyCount<DiePiece>(DiePiecePropertyCheckers.IsOne, Comparers<int>.LessThan, 3));
+		Rule<DiePiece> rule6 = new Rule<DiePiece>(new FaceSum(Comparers<int>.GreaterThanOrEqualTo,6));
 
 		Debug.Log (rule1.Evaluate(board) == true);
 		Debug.Log (rule2.Evaluate(board) == false);
