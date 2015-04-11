@@ -11,4 +11,9 @@ public static class DiePiecePropertyCheckers
 		return piece.colour == DiePiece.Colour.White;
 	}
 
+	public static bool IsBlack(DiePiece piece)
+	{
+		return piece.colour == DiePiece.Colour.Black;
+	}
+
 }

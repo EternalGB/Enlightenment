@@ -38,6 +38,11 @@ public class Board<T> where T : IPiece
 		return x >= 0 && x < width && y >= 0 && y < height;
 	}
 
+	public bool IsEmpty(int x, int y)
+	{
+		return pieces[x,y].Equals(default(T));
+	}
+
 	public bool IsAdjacent(int x1, int y1, int x2, int y2)
 	{
 		return IsValidSpace(x1,y1) && IsValidSpace(x2,y2)
@@ -46,7 +51,7 @@ public class Board<T> where T : IPiece
 
 	public bool PieceExistsAt(int x, int y)
 	{
-		return IsValidSpace(x,y) && !pieces[x,y].Equals(default(T));
+		return IsValidSpace(x,y) && !IsEmpty(x,y);
 	}
 
 	public int Distance(int x1, int y1, int x2, int y2)
