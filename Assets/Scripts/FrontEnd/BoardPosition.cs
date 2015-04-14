@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler where T : IPiece
+public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IDragHandler where T : IPiece
 {
 	
 	public int x, y;
 	public GameController<T> gc;
 	bool moving = false;
 	bool inside = false;
+	public RectTransform ghost;
 
 	public void OnPointerDown(PointerEventData data)
 	{
@@ -32,20 +34,23 @@ public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPo
 		inside = false;
 	}
 
-	/*
+
 	public void OnDrag(PointerEventData data)
 	{
-		if(gc.PieceExistsAt(x,y)) {
-			moving = true;
+		if(moving) {
+			ghost.gameObject.SetActive(true);
+			ghost.GetComponent<Image>().sprite = gc.GetPieceImage(gc.heldPiece);
+			ghost.position = data.position;
 		}
 	}
-	*/
+
 
 	public void OnPointerUp(PointerEventData data)
 	{
 		if(moving && !inside) {
 			gc.SetPiece(x,y, default(T));
 			gc.SetPieceAtCursor(gc.heldPiece);
+			ghost.gameObject.SetActive(false);
 		} else if(gc.PieceExistsAt(x,y)) {
 			gc.SetPieceAtCursor(CyclePiece(gc.GetPiece(x,y)));
 		}
