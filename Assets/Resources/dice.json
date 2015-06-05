@@ -1,0 +1,43 @@
+{
+  "Properties" : {
+    "Face" : [
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six"
+    ],
+    "Colour" : [
+      "White",
+      "Black",
+      "Red",
+      "Blue"
+    ]
+  },
+  "Pieces" : [
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "One"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 4
+      },
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "Two"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 3
+      }
+  ],
+  "Meta" : {
+    "HorizontalSortBy" : "Colour",
+    "VerticalSortBy" : "Face",
+    "CycleBy" : "Face",
+    "EmptyPieceImage" : "BlankDie"
+  }
+
+}

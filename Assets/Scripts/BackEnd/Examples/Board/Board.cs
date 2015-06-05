@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
-public class Board<T> where T : IPiece
+public class Board
 {
 	
 	protected int width, height;
-	protected T[,] pieces;
+	protected Piece[,] pieces;
 
 	public int Width { get{ return width;}}
 	public int Height { get {return height;}}
@@ -15,20 +15,20 @@ public class Board<T> where T : IPiece
 	{
 		this.width = width;
 		this.height = height;
-		pieces = new T[width,height];
+		pieces = new Piece[width,height];
 		for(int x = 0; x < width; x++) {
 			for(int y = 0; y < height; y++) {
-				pieces[x,y] = default(T);
+				pieces[x,y] = null;
 			}
 		}
 	}
 
-	public T GetPiece(int x, int y)
+	public Piece GetPiece(int x, int y)
 	{
 		return pieces[x,y];
 	}
 
-	public void SetPiece(int x, int y, T newPiece)
+	public void SetPiece(int x, int y, Piece newPiece)
 	{
 		pieces[x,y] = newPiece;
 	}
@@ -40,7 +40,7 @@ public class Board<T> where T : IPiece
 
 	public bool IsEmpty(int x, int y)
 	{
-		return pieces[x,y].Equals(default(T));
+		return pieces[x,y] == null;
 	}
 
 	public bool IsAdjacent(int x1, int y1, int x2, int y2)
@@ -59,12 +59,12 @@ public class Board<T> where T : IPiece
 		return Mathf.Abs (x1 - x2) + Mathf.Abs(y1 - y2);
 	}
 
-	public bool PieceHas(int x, int y, Func<T, bool> propertyEvaluator)
+	public bool PieceHas(int x, int y, Func<Piece, bool> propertyEvaluator)
 	{
 		return PieceExistsAt(x,y) && propertyEvaluator(pieces[x,y]);
 	}
 
-	public int NumPiecesWith(Func<T, bool> propertyEvaluator)
+	public int NumPiecesWith(Func<Piece, bool> propertyEvaluator)
 	{
 		int count = 0;
 		for(int x = 0; x < width; x++) {
@@ -76,6 +76,15 @@ public class Board<T> where T : IPiece
 		return count;
 	}
 
-
+	public override string ToString ()
+	{
+		string output = "";
+		for(int x = 0; x < width; x++) {
+			for(int y = 0; y < height; y++) {
+				output += string.Format(" ({0}) ", GetPiece(x,y));
+			}
+		}
+		return output;
+	}
 
 }

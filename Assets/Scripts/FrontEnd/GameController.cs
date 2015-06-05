@@ -2,26 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public abstract class GameController<T> : MonoBehaviour where T : IPiece
+public class GameController : MonoBehaviour
 {
 
-	public T heldPiece;
+	public Piece heldPiece;
 	public int numPieces;
-	public List<T> pieces;
-	public List<Sprite> images;
+	public TextAsset dictJson;
+	PieceInfo pieceInfo;
 	public int width, height;
 	public List<Image> boardPositions;
-	Board<T> board;
+	Board board;
 	int cursorX, cursorY;
 
-	public abstract Sprite GetPieceImage(T piece);
-
-	public abstract void Init();
+	public List<RectTransform> verticalPieceGroups;
 
 	void Start()
 	{
-		board = new Board<T>(width, height);
-		Init();
+		board = new Board(width, height);
+		pieceInfo = new PieceInfo(dictJson.text);
 	}
 
 	void RedrawBoard()
@@ -33,24 +31,32 @@ public abstract class GameController<T> : MonoBehaviour where T : IPiece
 		}
 	}
 
+	public Sprite GetPieceImage(Piece piece)
+	{
+		if(piece == null)
+			return pieceInfo.blankImage;
+		else
+			return pieceInfo.imageDict[piece];
+	}
+
 	public bool PieceExistsAt(int x, int y)
 	{
 		return board.PieceExistsAt(x,y);
 	}
 
-	public void SetPieceAtCursor(T piece)
+	public void SetPieceAtCursor(Piece piece)
 	{
 		if(board.IsValidSpace(cursorX,cursorY))
 			SetPiece(cursorX,cursorY,piece);
 	}
 
-	public void SetPiece(int x, int y, T piece)
+	public void SetPiece(int x, int y, Piece piece)
 	{
 		board.SetPiece(x,y, piece);
 		RedrawBoard();
 	}
 
-	public T GetPiece(int x, int y)
+	public Piece GetPiece(int x, int y)
 	{
 		return board.GetPiece(x,y);
 	}
@@ -63,7 +69,12 @@ public abstract class GameController<T> : MonoBehaviour where T : IPiece
 
 	public bool HasHeldPiece()
 	{
-		return !heldPiece.Equals(default(T));
+		return !(heldPiece == null);
+	}
+
+	public void CyclePieceAt(int x, int y)
+	{
+		SetPiece(x,y, pieceInfo.CyclePiece(GetPiece(x,y)));
 	}
 }
 

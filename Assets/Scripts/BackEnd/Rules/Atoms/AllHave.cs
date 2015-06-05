@@ -1,18 +1,18 @@
 using System;
 using UnityEngine;
 
-public class AllHave<T> : INode<T> where T : IPiece
+public class AllHave : INode
 {
 	
-	Func<T, bool> propertyCheck;
+	Func<Piece, bool> propertyCheck;
 
 	
-	public AllHave (Func<T, bool> propertyCheck)
+	public AllHave (Func<Piece, bool> propertyCheck)
 	{
 		this.propertyCheck = propertyCheck;
 	}
 	
-	public bool Evaluate (Board<T> board)
+	public bool Evaluate (Board board)
 	{
 		bool result = true;
 		for(int x = 0; x < board.Width; x++) {

@@ -1,64 +1,64 @@
-public interface INode<T> where T : IPiece
+public interface INode
 {
 
-	bool Evaluate(Board<T> board);
+	bool Evaluate(Board board);
 
 }
 
-public class Not<T> : INode<T> where T : IPiece
+public class Not : INode
 {
 
-	public INode<T> child;
+	public INode child;
 
-	public Not(INode<T> child)
+	public Not(INode child)
 	{
 		this.child = child;
 	}
 
-	public bool Evaluate(Board<T> board)
+	public bool Evaluate(Board board)
 	{
 		return !child.Evaluate(board);
 	}
 
 }
 
-public class And<T> : INode<T> where T : IPiece
+public class And : INode
 {
 
-	public INode<T> lChild, rChild;
+	public INode lChild, rChild;
 
-	public And(INode<T> lChild, INode<T> rChild)
+	public And(INode lChild, INode rChild)
 	{
 		this.lChild = lChild;
 		this.rChild = rChild;
 	}
 
-	public bool Evaluate(Board<T> board)
+	public bool Evaluate(Board board)
 	{
 		return lChild.Evaluate(board) && rChild.Evaluate(board);
 	}
 
 }
 
-public class Or<T> : INode<T> where T : IPiece
+public class Or : INode
 {
 
-	public INode<T> lChild, rChild;
+	public INode lChild, rChild;
 	
-	public Or(INode<T> lChild, INode<T> rChild)
+	public Or(INode lChild, INode rChild)
 	{
 		this.lChild = lChild;
 		this.rChild = rChild;
 	}
 	
-	public bool Evaluate(Board<T> board)
+	public bool Evaluate(Board board)
 	{
 		return lChild.Evaluate(board) || rChild.Evaluate(board);
 	}
 
 }
 
-public interface IAtom<T> : INode<T> where T : IPiece
+public interface IAtom : INode
 {
 
 

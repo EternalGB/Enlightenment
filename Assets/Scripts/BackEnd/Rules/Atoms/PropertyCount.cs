@@ -1,20 +1,20 @@
 using System;
 
-public class PropertyCount<T> : INode<T> where T : IPiece
+public class PropertyCount : INode
 {
 
-	Func<T, bool> propertyCheck;
+	Func<Piece, bool> propertyCheck;
 	Func<int, int, bool> countComparator;
 	int amount;
 
-	public PropertyCount (Func<T, bool> propertyCheck, Func<int, int, bool> countComparator, int amount)
+	public PropertyCount (Func<Piece, bool> propertyCheck, Func<int, int, bool> countComparator, int amount)
 	{
 		this.propertyCheck = propertyCheck;
 		this.countComparator = countComparator;
 		this.amount = amount;
 	}
 
-	public bool Evaluate (Board<T> board)
+	public bool Evaluate (Board board)
 	{
 		int count = 0;
 		for(int x = 0; x < board.Width; x++) {

@@ -1,0 +1,32 @@
+{
+  "Properties" : {
+    "Face" : [
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six"
+    ],
+    "Colour" : [
+      "Black",
+      "White",
+      "Red",
+      "Blue"
+    ]
+  },
+  "Pieces" : [
+    {
+      "Properties" : {
+        "Colour" : "White",
+        "Face" : "One"
+      },
+      "ImageName" : "DiceWhite",
+      "SpriteIndex" : 4
+    }
+  ],
+  "Meta" : {
+    "HorizontalSortBy" : "Colour",
+    "VerticalSortBy" : "Face"
+  }
+}

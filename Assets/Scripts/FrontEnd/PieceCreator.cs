@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public abstract class PieceCreator<T> : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler where T : IPiece
+public class PieceCreator : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
 
-	public GameController<T> gc;
-	public T piece;
+	public GameController gc;
+	public Piece piece;
 	public RectTransform ghost;
 
 	public void OnPointerDown(PointerEventData data)

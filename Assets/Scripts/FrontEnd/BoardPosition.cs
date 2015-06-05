@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IDragHandler where T : IPiece
+public class BoardPosition : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IDragHandler
 {
 	
 	public int x, y;
-	public GameController<T> gc;
+	public GameController gc;
 	bool moving = false;
 	bool inside = false;
 	public RectTransform ghost;
@@ -19,8 +19,6 @@ public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPo
 			moving = true;
 		}
 	}
-
-	public abstract T CyclePiece(T piece);
 
 	public void OnPointerEnter(PointerEventData data)
 	{
@@ -48,11 +46,11 @@ public abstract class BoardPosition<T> : MonoBehaviour, IPointerDownHandler, IPo
 	public void OnPointerUp(PointerEventData data)
 	{
 		if(moving && !inside) {
-			gc.SetPiece(x,y, default(T));
+			gc.SetPiece(x,y, null);
 			gc.SetPieceAtCursor(gc.heldPiece);
 			ghost.gameObject.SetActive(false);
 		} else if(gc.PieceExistsAt(x,y)) {
-			gc.SetPieceAtCursor(CyclePiece(gc.GetPiece(x,y)));
+			gc.CyclePieceAt(x,y);
 		}
 		moving = false;
 	}

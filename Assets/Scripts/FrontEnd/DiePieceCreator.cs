@@ -1,13 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class DiePieceCreator : PieceCreator<DiePiece>
+public class DiePieceCreator : PieceCreator
 {
 
-	void Start()
-	{
-		gc = GameObject.FindWithTag("GameController").GetComponent<DieGameController>();
-	}
 
 
 }

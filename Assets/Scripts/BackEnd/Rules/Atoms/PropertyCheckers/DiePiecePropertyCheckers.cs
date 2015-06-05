@@ -1,19 +1,16 @@
 public static class DiePiecePropertyCheckers
 {
 
-	public static bool IsOne(DiePiece piece)
+	public static bool IsOne(Piece piece)
 	{
-		return piece.face == DiePiece.Face.One;
+		return piece.GetPropertyValue("Face") == "One";
 	}
 
-	public static bool IsWhite(DiePiece piece)
+	public static bool IsBlue(Piece piece)
 	{
-		return piece.colour == DiePiece.Colour.White;
+		return piece.GetPropertyValue("Colour") == "Blue";
 	}
 
-	public static bool IsBlack(DiePiece piece)
-	{
-		return piece.colour == DiePiece.Colour.Black;
-	}
+
 
 }

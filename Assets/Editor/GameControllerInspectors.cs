@@ -2,7 +2,7 @@
 using UnityEditor;
 using System.Collections.Generic;
 using System;
-
+/*
 [CustomEditor(typeof(DieGameController))]
 public class DieGameControllerInspector : Editor 
 {
@@ -69,3 +69,4 @@ public class DieGameControllerInspector : Editor
 	}
 
 }
+*/

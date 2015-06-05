@@ -1,34 +1,34 @@
 
-public class Rule<T> where T : IPiece
+public class Rule
 {
 
-	INode<T> root;
+	INode root;
 
-	public Rule(INode<T> root)
+	public Rule(INode root)
 	{
 		this.root = root;
 	}
 
-	public bool Evaluate(Board<T> board)
+	public bool Evaluate(Board board)
 	{
 		return root.Evaluate(board);
 	}
 
 	public void Negate()
 	{
-		Not<T> newRoot = new Not<T>(root);
+		Not newRoot = new Not(root);
 		root = newRoot;
 	}
 
-	public void And(INode<T> node)
+	public void And(INode node)
 	{
-		And<T> newRoot = new And<T>(root,node);
+		And newRoot = new And(root,node);
 		root = newRoot;
 	}
 
-	public void Or(INode<T> node)
+	public void Or(INode node)
 	{
-		Or<T> newRoot = new Or<T>(root,node);
+		Or newRoot = new Or(root,node);
 		root = newRoot;
 	}
 

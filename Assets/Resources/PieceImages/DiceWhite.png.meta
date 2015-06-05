@@ -1,15 +1,21 @@
 fileFormatVersion: 2
-guid: 35c4a508a9e63e242ae4e2798b68058e
-timeCreated: 1428858127
+guid: 97dfbc28870451242916d5d2ec47023e
+timeCreated: 1433497363
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: diceRed_border_0
-    21300002: diceRed_border_1
-    21300004: diceRed_border_2
-    21300006: diceRed_border_3
-    21300008: diceRed_border_4
-    21300010: diceRed_border_5
+    21300000: diceWhite_border_0
+    21300002: diceWhite_border_1
+    21300004: diceWhite_border_2
+    21300006: diceWhite_border_3
+    21300008: diceWhite_border_4
+    21300010: diceWhite_border_5
+    21300012: DiceWhite_0
+    21300014: DiceWhite_1
+    21300016: DiceWhite_2
+    21300018: DiceWhite_3
+    21300020: DiceWhite_4
+    21300022: DiceWhite_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +61,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: diceRed_border_0
+    - name: DiceWhite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -65,7 +71,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: diceRed_border_1
+    - name: DiceWhite_1
       rect:
         serializedVersion: 2
         x: 68
@@ -75,7 +81,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: diceRed_border_2
+    - name: DiceWhite_2
       rect:
         serializedVersion: 2
         x: 0
@@ -85,7 +91,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: diceRed_border_3
+    - name: DiceWhite_3
       rect:
         serializedVersion: 2
         x: 68
@@ -95,7 +101,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: diceRed_border_4
+    - name: DiceWhite_4
       rect:
         serializedVersion: 2
         x: 0
@@ -105,7 +111,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: diceRed_border_5
+    - name: DiceWhite_5
       rect:
         serializedVersion: 2
         x: 68
@@ -115,7 +121,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-  spritePackingTag: 
+  spritePackingTag: Dice
   userData: 
   assetBundleName: 
   assetBundleVariant: 
