@@ -13,6 +13,11 @@ public class Piece
 		properties = new List<PropertyValuePair>();
 	}
 
+	public Piece(Piece old)
+	{
+		properties = new List<PropertyValuePair>(old.properties);
+	}
+
 	public List<PropertyValuePair>.Enumerator GetProperties()
 	{
 		return properties.GetEnumerator();

@@ -15,6 +15,12 @@
       "Blue"
     ]
   },
+  "Meta" : {
+    "HorizontalSortBy" : "Colour",
+    "VerticalSortBy" : "Face",
+    "CycleBy" : "Face",
+    "EmptyPieceImage" : "BlankDie"
+  },
   "Pieces" : [
       {
         "Properties" : {
@@ -31,13 +37,184 @@
         },
         "ImageName" : "DiceWhite",
         "SpriteIndex" : 3
+      },
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "Three"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 1
+      },
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "Four"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 5
+      },
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "Five"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 2
+      },
+      {
+        "Properties" : {
+          "Colour" : "White",
+          "Face" : "Six"
+        },
+        "ImageName" : "DiceWhite",
+        "SpriteIndex" : 0
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "One"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 4
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "Two"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 3
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "Three"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 1
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "Four"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 5
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "Five"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 2
+      },
+      {
+        "Properties" : {
+          "Colour" : "Black",
+          "Face" : "Six"
+        },
+        "ImageName" : "DiceBlack",
+        "SpriteIndex" : 0
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "One"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 4
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "Two"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 3
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "Three"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 1
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "Four"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 5
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "Five"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 2
+      },
+      {
+        "Properties" : {
+          "Colour" : "Red",
+          "Face" : "Six"
+        },
+        "ImageName" : "DiceRed",
+        "SpriteIndex" : 0
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "One"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 4
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "Two"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 3
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "Three"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 1
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "Four"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 5
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "Five"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 2
+      },
+      {
+        "Properties" : {
+          "Colour" : "Blue",
+          "Face" : "Six"
+        },
+        "ImageName" : "DiceBlue",
+        "SpriteIndex" : 0
       }
-  ],
-  "Meta" : {
-    "HorizontalSortBy" : "Colour",
-    "VerticalSortBy" : "Face",
-    "CycleBy" : "Face",
-    "EmptyPieceImage" : "BlankDie"
-  }
+  ]
+
 
 }

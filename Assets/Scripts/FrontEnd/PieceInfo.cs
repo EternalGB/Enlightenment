@@ -34,7 +34,7 @@ public class PieceInfo
 			}
 			string imageName = (string)(pieces[i]["ImageName"]);
 			int index = (int)pieces[i]["SpriteIndex"];
-			Debug.Log (string.Format("{0}\t adding {1}_{2}",next, imageName, index));
+			//Debug.Log (string.Format("{0}\t adding {1}_{2}",next, imageName, index));
 			imageDict.Add(next, Resources.LoadAll<Sprite>("PieceImages/" + imageName)[index]);
 		}
 
@@ -44,7 +44,8 @@ public class PieceInfo
 
 	public Piece CyclePiece(Piece piece)
 	{
-		//TODO overwrites existing piece
+		//clone a new piece
+		piece = new Piece(piece);
 		List<string> values = properties[cycleBy];
 		string val = piece.GetPropertyValue(cycleBy);
 		int index = values.FindIndex(x => x.Equals(val));
