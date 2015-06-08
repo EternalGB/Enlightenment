@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
 	{
 		board = new Board(width, height);
 		pieceInfo = new PieceInfo(dictJson.text);
-		rule = new Rule(new AllHave(PropertyCheckers.DiePiece.FaceValue(Comparers<int>.GreaterThan,2)));
+		//rule = new Rule(new AllHave(PropertyCheckers.DiePiece.FaceValue(Comparers<int>.GreaterThan,2)));
 	}
 
 	void RedrawBoard()

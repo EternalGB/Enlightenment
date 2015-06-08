@@ -3,24 +3,84 @@ using System;
 public static class PropertyCheckers
 {
 
-	public static Func<Piece, bool> Negate(Func<Piece, bool> func)
+	public struct Not : IPropertyChecker
 	{
-		return delegate(Piece p) { return !func(p);};
+
+		IPropertyChecker child;
+
+		public Not(IPropertyChecker child)
+		{
+			this.child = child;
+		}
+
+		public bool Check(Piece p)
+		{
+			return !child.Check(p);
+		}
+
+		public override string ToString ()
+		{
+			return string.Format ("NOT ({0})", child.ToString());
+		}
+
 	}
 
-	public static Func<Piece, bool> PropertyHasValue(string property, string value)
+	public struct Identity : IPropertyChecker
 	{
-		return delegate(Piece p) {return p.GetPropertyValue(property) == value;};
+
+		public bool Check(Piece p)
+		{
+			return true;
+		}
+
+		public override string ToString()
+		{
+			return "ALL";
+		}
 	}
+
+	public struct PropertyHasValue : IPropertyChecker
+	{
+		string property, value;
+
+		public PropertyHasValue(string property, string value)
+		{
+			this.property = property;
+			this.value = value;
+		}
+
+		public bool Check(Piece p)
+		{
+			return p.GetPropertyValue(property).Equals(value);
+		}
+
+		public override string ToString ()
+		{
+			return string.Format ("{0} == {1}", property, value);
+		}
+	}
+
+
+
 
 	public static class DiePiece
 	{
-		public static Func<Piece, bool> FaceValue(Func<int, int, bool> comparer, int amount)
+
+		public struct FaceValue : IPropertyChecker
 		{
-			return delegate(Piece p)
+			Func<int, int, bool> comparer;
+			int amount;
+
+			public FaceValue(Func<int, int, bool> comparer, int amount)
+			{
+				this.comparer = comparer;
+				this.amount = amount;
+			}
+
+			public bool Check(Piece p)
 			{
 				return comparer(ParseFaceValue(p.GetPropertyValue("Face")), amount);
-			};
+			}
 		}
 
 		public static int ParseFaceValue(string number)

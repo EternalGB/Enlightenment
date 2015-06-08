@@ -1,31 +1,122 @@
 using System;
 
+public interface IComparer<T>
+{
+	bool Compare(T x, T y);
+
+	IComparer<T> GetNegation();
+}
+
 public static class Comparers<T> where T : IComparable
 {
 
-	public static bool GreaterThan(T x, T y)
+	public struct GreaterThan : IComparer<T>
 	{
-		return x.CompareTo(y) > 0;
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) > 0;
+		}
+
+		public IComparer<T> GetNegation()
+		{
+			return new LessThanOrEqualTo();
+		}
+
+		public override string ToString ()
+		{
+			return ">";
+		}
 	}
 
-	public static bool GreaterThanOrEqualTo(T x, T y)
+	public struct GreaterThanOrEqualTo : IComparer<T>
 	{
-		return x.CompareTo(y) >= 0;
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) >= 0;
+		}
+
+		public IComparer<T> GetNegation()
+		{
+			return new LessThan();
+		}
+
+		public override string ToString ()
+		{
+			return ">=";
+		}
 	}
 
-	public static bool Equal(T x, T y)
+	public struct Equal : IComparer<T>
 	{
-		return x.CompareTo(y) == 0;
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) == 0;
+		}
+
+		public IComparer<T> GetNegation()
+		{
+			return new NotEqual();
+		}
+
+		public override string ToString ()
+		{
+			return "==";
+		}
 	}
 
-	public static bool LessThan(T x, T y)
+	public struct NotEqual : IComparer<T>
 	{
-		return x.CompareTo(y) < 0;
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) != 0;
+		}
+		
+		public IComparer<T> GetNegation()
+		{
+			return new Equal();
+		}
+		
+		public override string ToString ()
+		{
+			return "!=";
+		}
 	}
 
-	public static bool LessThanOrEqualTo(T x, T y)
+	public struct LessThan : IComparer<T>
 	{
-		return x.CompareTo(y) <= 0;
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) < 0;
+		}
+		
+		public IComparer<T> GetNegation()
+		{
+			return new GreaterThanOrEqualTo();
+		}
+
+		public override string ToString ()
+		{
+			return "<";
+		}
 	}
+
+	public struct LessThanOrEqualTo : IComparer<T>
+	{
+		public bool Compare(T x, T y)
+		{
+			return x.CompareTo(y) <= 0;
+		}
+		
+		public IComparer<T> GetNegation()
+		{
+			return new GreaterThan();
+		}
+
+		public override string ToString ()
+		{
+			return "<=";
+		}
+	}
+	
 
 }

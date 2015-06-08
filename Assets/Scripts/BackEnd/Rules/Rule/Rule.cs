@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 
 public class Rule
 {
@@ -30,6 +31,37 @@ public class Rule
 	{
 		Or newRoot = new Or(root,node);
 		root = newRoot;
+	}
+
+	public void And(Rule rule)
+	{
+		And newRoot = new And(root, rule.root);
+		root = newRoot;
+	}
+
+	public void Or(Rule rule)
+	{
+		Or newRoot = new Or(root, rule.root);
+		root = newRoot;
+	}
+
+	public override string ToString()
+	{
+		return root.ToString();
+	}
+
+	public override bool Equals (object obj)
+	{
+		Rule other = obj as Rule;
+		if(other == null)
+			return false;
+
+		return ToString().Equals(other.ToString());
+	}
+
+	public override int GetHashCode ()
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

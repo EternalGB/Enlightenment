@@ -1,38 +1,46 @@
 using System;
 using UnityEngine;
 
-public class AllHave : INode
+public class AllHave : Atom
 {
 
-	Func<Piece, bool> filter;
-	Func<Piece, bool> propertyCheck;
+	IPropertyChecker filter;
+	IPropertyChecker propertyCheck;
 
 	
-	public AllHave (Func<Piece, bool> propertyCheck)
+	public AllHave (IPropertyChecker propertyCheck)
 	{
 		this.propertyCheck = propertyCheck;
-		this.filter = delegate(Piece p) {return true;};
+		this.filter = new PropertyCheckers.Identity();
 	}
 
-	public AllHave(Func<Piece, bool> propertyCheck,Func<Piece, bool> filter)
+	public AllHave(IPropertyChecker propertyCheck, IPropertyChecker filter)
 	{
 		this.propertyCheck = propertyCheck;
 		this.filter = filter;
 	}
 	
-	public bool Evaluate (Board board)
+	public override bool Evaluate (Board board)
 	{
 		bool result = true;
 		for(int x = 0; x < board.Width; x++) {
 			for(int y = 0; y < board.Height; y++) {
-				if(board.PieceExistsAt(x,y) && board.PieceHas(x,y,filter)) {
-					result = result && board.PieceHas(x,y,propertyCheck);
-					if(!board.PieceHas(x,y,propertyCheck))
-						Debug.Log ("Piece at " + x + ", " + y + " does not have property " + propertyCheck.Method.Name);
+				if(board.PieceExistsAt(x,y) && board.PieceHas(x,y,filter.Check)) {
+					result = result && board.PieceHas(x,y,propertyCheck.Check);
 				}
 			}
 		}
 		return result;
+	}
+
+	public override Atom Negate()
+	{
+		return new ExistsOneHas(new PropertyCheckers.Not(propertyCheck), this.filter);
+	}
+
+	public override string ToString ()
+	{
+		return string.Format ("AllHave [{0}]", propertyCheck.ToString());
 	}
 	
 }

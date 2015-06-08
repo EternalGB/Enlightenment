@@ -1,36 +1,46 @@
 using System;
 
-public class ExistsOneHas : INode
+public class ExistsOneHas : Atom
 {
 	
-	Func<Piece, bool> propertyCheck;
-	Func<Piece, bool> filter;
+	IPropertyChecker propertyCheck;
+	IPropertyChecker filter;
 	
 	
-	public ExistsOneHas (Func<Piece, bool> propertyCheck)
+	public ExistsOneHas (IPropertyChecker propertyCheck)
 	{
 		this.propertyCheck = propertyCheck;
-		this.filter = delegate(Piece p) { return true;};
+		this.filter = new PropertyCheckers.Identity();
 	}
 
-	public ExistsOneHas(Func<Piece, bool> propertyCheck, Func<Piece, bool> filter)
+	public ExistsOneHas(IPropertyChecker propertyCheck, IPropertyChecker filter)
 	{
 		this.propertyCheck = propertyCheck;
 		this.filter = filter;
 	}
 	
-	public bool Evaluate (Board board)
+	public override bool Evaluate (Board board)
 	{
 		for(int x = 0; x < board.Width; x++) {
 			for(int y = 0; y < board.Height; y++) {
-				if(board.PieceHas(x,y,filter) && board.PieceHas(x,y,propertyCheck)) {
+				if(board.PieceHas(x,y,filter.Check) && board.PieceHas(x,y,propertyCheck.Check)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	
+
+	public override Atom Negate()
+	{
+		return new AllHave(new PropertyCheckers.Not(this.propertyCheck), this.filter);
+	}
+
+	public override string ToString ()
+	{
+		return string.Format ("ExistsOneHas [{0}]", propertyCheck.ToString());
+	}
+
 }
 
 
