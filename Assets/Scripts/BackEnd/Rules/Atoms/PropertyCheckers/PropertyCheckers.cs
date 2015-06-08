@@ -3,6 +3,11 @@ using System;
 public static class PropertyCheckers
 {
 
+	public static Func<Piece, bool> Negate(Func<Piece, bool> func)
+	{
+		return delegate(Piece p) { return !func(p);};
+	}
+
 	public static Func<Piece, bool> PropertyHasValue(string property, string value)
 	{
 		return delegate(Piece p) {return p.GetPropertyValue(property) == value;};

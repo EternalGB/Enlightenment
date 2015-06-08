@@ -16,7 +16,7 @@ public class DieTest : MonoBehaviour
 
 		Rule rule1 = new Rule(new AllHave(PropertyCheckers.PropertyHasValue("Face","One")));
 		Rule rule2 = new Rule(new ExistsOneHas(PropertyCheckers.PropertyHasValue("Face","One")));
-		Rule rule3 = new Rule(new NoneHave(PropertyCheckers.PropertyHasValue("Colour","Blue")));
+		Rule rule3 = new Rule(new AllHave(PropertyCheckers.Negate(PropertyCheckers.PropertyHasValue("Colour","Blue"))));
 		Rule rule4 = new Rule(new FaceSum(Comparers<int>.LessThan, 7));
 		Rule rule5 = new Rule(new PropertyCount(PropertyCheckers.PropertyHasValue("Face","One"), Comparers<int>.Equal, 1));
 

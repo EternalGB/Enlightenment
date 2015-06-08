@@ -14,12 +14,15 @@ public class GameController : MonoBehaviour
 	Board board;
 	int cursorX, cursorY;
 
+	Rule rule;
+
 	public List<RectTransform> verticalPieceGroups;
 
 	void Start()
 	{
 		board = new Board(width, height);
 		pieceInfo = new PieceInfo(dictJson.text);
+		rule = new Rule(new AllHave(PropertyCheckers.DiePiece.FaceValue(Comparers<int>.GreaterThan,2)));
 	}
 
 	void RedrawBoard()
@@ -75,6 +78,16 @@ public class GameController : MonoBehaviour
 	public void CyclePieceAt(int x, int y)
 	{
 		SetPiece(x,y, pieceInfo.CyclePiece(GetPiece(x,y)));
+	}
+
+	public bool EvaluateBoard()
+	{
+		return rule.Evaluate(board);
+	}
+
+	public void TestBoard()
+	{
+		Debug.Log(EvaluateBoard());
 	}
 }
 
