@@ -68,10 +68,10 @@ public static class PropertyCheckers
 
 		public struct FaceValue : IPropertyChecker
 		{
-			Func<int, int, bool> comparer;
+			IComparer<int> comparer;
 			int amount;
 
-			public FaceValue(Func<int, int, bool> comparer, int amount)
+			public FaceValue(IComparer<int> comparer, int amount)
 			{
 				this.comparer = comparer;
 				this.amount = amount;
@@ -79,7 +79,7 @@ public static class PropertyCheckers
 
 			public bool Check(Piece p)
 			{
-				return comparer(ParseFaceValue(p.GetPropertyValue("Face")), amount);
+				return comparer.Compare(ParseFaceValue(p.GetPropertyValue("Face")), amount);
 			}
 		}
 

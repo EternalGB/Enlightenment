@@ -6,7 +6,7 @@ using System.Collections;
 public class PieceCreator : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
 
-	public GameController gc;
+	public ExampleBuilder gc;
 	public Piece piece;
 	public RectTransform ghost;
 

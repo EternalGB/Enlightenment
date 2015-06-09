@@ -1,0 +1,1210 @@
+fileFormatVersion: 2
+guid: 6b0a04d696012e845b609d99a98e97ca
+timeCreated: 1433825648
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: IconsWhite_0
+    21300002: IconsWhite_1
+    21300004: IconsWhite_2
+    21300006: IconsWhite_3
+    21300008: IconsWhite_4
+    21300010: IconsWhite_5
+    21300012: IconsWhite_6
+    21300014: IconsWhite_7
+    21300016: IconsWhite_8
+    21300018: IconsWhite_9
+    21300020: IconsWhite_10
+    21300022: IconsWhite_11
+    21300024: IconsWhite_12
+    21300026: IconsWhite_13
+    21300028: IconsWhite_14
+    21300030: IconsWhite_15
+    21300032: IconsWhite_16
+    21300034: IconsWhite_17
+    21300036: IconsWhite_18
+    21300038: IconsWhite_19
+    21300040: IconsWhite_20
+    21300042: IconsWhite_21
+    21300044: IconsWhite_22
+    21300046: IconsWhite_23
+    21300048: IconsWhite_24
+    21300050: IconsWhite_25
+    21300052: IconsWhite_26
+    21300054: IconsWhite_27
+    21300056: IconsWhite_28
+    21300058: IconsWhite_29
+    21300060: IconsWhite_30
+    21300062: IconsWhite_31
+    21300064: IconsWhite_32
+    21300066: IconsWhite_33
+    21300068: IconsWhite_34
+    21300070: IconsWhite_35
+    21300072: IconsWhite_36
+    21300074: IconsWhite_37
+    21300076: IconsWhite_38
+    21300078: IconsWhite_39
+    21300080: IconsWhite_40
+    21300082: IconsWhite_41
+    21300084: IconsWhite_42
+    21300086: IconsWhite_43
+    21300088: IconsWhite_44
+    21300090: IconsWhite_45
+    21300092: IconsWhite_46
+    21300094: IconsWhite_47
+    21300096: IconsWhite_48
+    21300098: IconsWhite_49
+    21300100: IconsWhite_50
+    21300102: IconsWhite_51
+    21300104: IconsWhite_52
+    21300106: IconsWhite_53
+    21300108: IconsWhite_54
+    21300110: IconsWhite_55
+    21300112: IconsWhite_56
+    21300114: IconsWhite_57
+    21300116: IconsWhite_58
+    21300118: IconsWhite_59
+    21300120: IconsWhite_60
+    21300122: IconsWhite_61
+    21300124: IconsWhite_62
+    21300126: IconsWhite_63
+    21300128: IconsWhite_64
+    21300130: IconsWhite_65
+    21300132: IconsWhite_66
+    21300134: IconsWhite_67
+    21300136: IconsWhite_68
+    21300138: IconsWhite_69
+    21300140: IconsWhite_70
+    21300142: IconsWhite_71
+    21300144: IconsWhite_72
+    21300146: IconsWhite_73
+    21300148: IconsWhite_74
+    21300150: IconsWhite_75
+    21300152: IconsWhite_76
+    21300154: IconsWhite_77
+    21300156: IconsWhite_78
+    21300158: IconsWhite_79
+    21300160: IconsWhite_80
+    21300162: IconsWhite_81
+    21300164: IconsWhite_82
+    21300166: IconsWhite_83
+    21300168: IconsWhite_84
+    21300170: IconsWhite_85
+    21300172: IconsWhite_86
+    21300174: IconsWhite_87
+    21300176: IconsWhite_88
+    21300178: IconsWhite_89
+    21300180: IconsWhite_90
+    21300182: IconsWhite_91
+    21300184: IconsWhite_92
+    21300186: IconsWhite_93
+    21300188: IconsWhite_94
+    21300190: IconsWhite_95
+    21300192: IconsWhite_96
+    21300194: IconsWhite_97
+    21300196: IconsWhite_98
+    21300198: IconsWhite_99
+    21300200: IconsWhite_100
+    21300202: IconsWhite_101
+    21300204: IconsWhite_102
+    21300206: IconsWhite_103
+    21300208: IconsWhite_104
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: IconsWhite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_15
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_20
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_31
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_32
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_36
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_38
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_39
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_42
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_43
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_44
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_46
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_47
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_48
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_49
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1048
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_51
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1048
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1048
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_53
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1048
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_54
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1048
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_56
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_58
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_59
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 948
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_61
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_62
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_63
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_64
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 848
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_66
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_67
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_68
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_69
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 748
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_71
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_72
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_73
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_74
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 648
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_76
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_77
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_78
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_79
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 548
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_81
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_82
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_83
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 448
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_86
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_87
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_88
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 348
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_91
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_92
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_93
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_94
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 248
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_96
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_98
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_99
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 148
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_101
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 48
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_102
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 48
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_103
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 48
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: IconsWhite_104
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 48
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

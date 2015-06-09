@@ -7,28 +7,28 @@ public class BoardPosition : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
 {
 	
 	public int x, y;
-	public GameController gc;
+	public ExampleBuilder example;
 	bool moving = false;
 	bool inside = false;
 	public RectTransform ghost;
 
 	public void OnPointerDown(PointerEventData data)
 	{
-		if(gc.PieceExistsAt(x,y)) {
-			gc.heldPiece = gc.GetPiece(x,y);
+		if(example.PieceExistsAt(x,y)) {
+			example.heldPiece = example.GetPiece(x,y);
 			moving = true;
 		}
 	}
 
 	public void OnPointerEnter(PointerEventData data)
 	{
-		gc.SetCursorPosition(x,y);
+		example.SetCursorPosition(x,y);
 		inside = true;
 	}
 
 	public void OnPointerExit(PointerEventData data)
 	{
-		gc.SetCursorPosition(-1,-1);
+		example.SetCursorPosition(-1,-1);
 		inside = false;
 	}
 
@@ -37,7 +37,7 @@ public class BoardPosition : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
 	{
 		if(moving) {
 			ghost.gameObject.SetActive(true);
-			ghost.GetComponent<Image>().sprite = gc.GetPieceImage(gc.heldPiece);
+			ghost.GetComponent<Image>().sprite = example.GetPieceImage(example.heldPiece);
 			ghost.position = data.position;
 		}
 	}
@@ -46,11 +46,11 @@ public class BoardPosition : MonoBehaviour, IPointerDownHandler, IPointerEnterHa
 	public void OnPointerUp(PointerEventData data)
 	{
 		if(moving && !inside) {
-			gc.SetPiece(x,y, null);
-			gc.SetPieceAtCursor(gc.heldPiece);
+			example.SetPiece(x,y, null);
+			example.SetPieceAtCursor(example.heldPiece);
 			ghost.gameObject.SetActive(false);
-		} else if(gc.PieceExistsAt(x,y)) {
-			gc.CyclePieceAt(x,y);
+		} else if(example.PieceExistsAt(x,y)) {
+			example.CyclePieceAt(x,y);
 		}
 		moving = false;
 	}
