@@ -1,10 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class RuleBuilder : MonoBehaviour
+public class RuleBlockConstructionArea : MonoBehaviour
 {
-
-
 
 	// Use this for initialization
 	void Start ()
