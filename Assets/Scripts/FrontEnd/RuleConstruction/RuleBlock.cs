@@ -2,10 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-public class RuleBlock : MonoBehaviour
+public abstract class RuleBlock : MonoBehaviour
 {
 
 	public Sprite previewSprite;
-	
+	public abstract INode GetNode();
+
+
+
 }
 

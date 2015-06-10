@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
 	public PieceInfo pieceInfo;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 		pieceInfo = new PieceInfo(dictJson.text);
 	}

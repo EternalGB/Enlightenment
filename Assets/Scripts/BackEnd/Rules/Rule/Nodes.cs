@@ -25,7 +25,7 @@ public class Not : INode
 	{
 		return !child.Evaluate(board);
 	}
-
+	
 	public List<INode> GetChildren()
 	{
 		List<INode> children = new List<INode>();
@@ -60,6 +60,7 @@ public class And : INode
 	{
 		return lChild.Evaluate(board) && rChild.Evaluate(board);
 	}
+
 
 	public List<INode> GetChildren()
 	{
@@ -104,6 +105,7 @@ public class Or : INode
 		return lChild.Evaluate(board) || rChild.Evaluate(board);
 	}
 
+
 	public List<INode> GetChildren()
 	{
 		List<INode> children = new List<INode>();
@@ -137,6 +139,7 @@ public abstract class Atom : INode
 	public abstract bool Evaluate(Board board);
 
 	public abstract Atom Negate();
+
 
 	public List<INode> GetChildren()
 	{

@@ -35,7 +35,7 @@ public static class PropertyCheckers
 
 		public override string ToString()
 		{
-			return "ALL";
+			return "Pieces";
 		}
 	}
 
