@@ -13,19 +13,22 @@ public class RuleBlockCreator : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 	public void OnPointerDown(PointerEventData data)
 	{
 		rb.heldBlockPrefab = nodePrefab;
+		ghost.position = data.position;
 		ghost.gameObject.SetActive(true);
 		//ghost.GetComponent<Image>().color = new Color(255,255,255,128);
 		ghost.GetComponent<Image>().sprite = nodePrefab.GetComponent<RuleBlock>().previewSprite;
-		ghost.position = data.position;
+
 	}
 	
 	public void OnDrag (PointerEventData data)
 	{
-
 		if(rb.HasHeldBlock()) {
-			ghost.position = data.position;
+			GameObject pointerOver = rb.GetPointerOver();
+			if(pointerOver != null && pointerOver.GetComponent<RuleBlockSlot>())
+				ghost.position = pointerOver.transform.position;
+			else
+				ghost.position = data.position;
 		}
-
 	}
 
 

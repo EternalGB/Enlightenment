@@ -45,6 +45,8 @@ public class RuleBuilder : MonoBehaviour
 				newBlock.transform.SetParent(objOver.transform.parent);
 				slot.SetChildInParent(block.GetNode());
 
+				//have to manually call this because disabling the object prevents the slot from removing itself
+				RemovePointerOver(objOver);
 				objOver.SetActive(false);
 			}
 		}
@@ -59,6 +61,14 @@ public class RuleBuilder : MonoBehaviour
 	public void RemovePointerOver(GameObject obj)
 	{
 		pointerOver.Remove(obj);
+	}
+
+	public GameObject GetPointerOver()
+	{
+		if(pointerOver.Count > 0)
+			return pointerOver[0];
+		else
+			return null;
 	}
 }
 
