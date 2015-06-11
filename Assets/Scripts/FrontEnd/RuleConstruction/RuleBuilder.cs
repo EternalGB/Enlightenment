@@ -70,5 +70,10 @@ public class RuleBuilder : MonoBehaviour
 		else
 			return null;
 	}
+
+	public void PrintRule()
+	{
+		Debug.Log (rule.ToString());
+	}
 }
 

@@ -41,6 +41,16 @@ public class ExistsOneHas : Atom
 		return string.Format ("ExistsOneHas [{0}]", propertyCheck.ToString());
 	}
 
+	public void SetPropertyCheck(IPropertyChecker check)
+	{
+		this.propertyCheck = check;
+	}
+	
+	public void SetFilter(IPropertyChecker check)
+	{
+		this.filter = check;
+	}
+
 }
 
 

@@ -34,7 +34,6 @@ public class RuleBlockCreator : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
 	public void OnPointerUp(PointerEventData data)
 	{
-		Debug.Log (name + " Pointer Up");
 		if(rb.HasHeldBlock()) {
 			rb.CreateHeldBlockAtPointer();
 			ghost.gameObject.SetActive(false);
