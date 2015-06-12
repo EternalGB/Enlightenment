@@ -26,6 +26,11 @@ public class PropertyCount : Atom
 		return countComparator.Compare(count, amount);
 	}
 
+	public override INode DeepClone()
+	{
+		return new PropertyCount(propertyCheck, countComparator, amount);
+	}
+
 	public override Atom Negate()
 	{
 		return new PropertyCount(this.propertyCheck, countComparator.GetNegation(), amount);

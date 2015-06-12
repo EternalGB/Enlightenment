@@ -9,6 +9,10 @@ public interface INode
 
 	string ToString();
 
+	INode DeepClone();
+
+	bool IsLeaf();
+
 }
 
 public class Not : INode
@@ -33,6 +37,16 @@ public class Not : INode
 		return children;
 	}
 
+	public INode DeepClone()
+	{
+		return new Not(child.DeepClone());
+	}
+
+	public bool IsLeaf()
+	{
+		return false;
+	}
+
 	public override string ToString ()
 	{
 		string cString;
@@ -42,6 +56,8 @@ public class Not : INode
 			cString = string.Format("({0})", child.ToString());
 		return string.Format("NOT {0}", cString);
 	}
+
+
 
 }
 
@@ -68,6 +84,16 @@ public class And : INode
 		children.Add(lChild);
 		children.Add(rChild);
 		return children;
+	}
+
+	public INode DeepClone()
+	{
+		return new And(lChild.DeepClone(), rChild.DeepClone());
+	}
+
+	public bool IsLeaf()
+	{
+		return false;
 	}
 
 	public override string ToString ()
@@ -114,6 +140,16 @@ public class Or : INode
 		return children;
 	}
 
+	public INode DeepClone()
+	{
+		return new Or(lChild.DeepClone(), rChild.DeepClone());
+	}
+
+	public bool IsLeaf()
+	{
+		return false;
+	}
+
 	public override string ToString ()
 	{
 		string lString, rString;
@@ -140,6 +176,12 @@ public abstract class Atom : INode
 
 	public abstract Atom Negate();
 
+	public abstract INode DeepClone();
+
+	public bool IsLeaf()
+	{
+		return true;
+	}
 
 	public List<INode> GetChildren()
 	{

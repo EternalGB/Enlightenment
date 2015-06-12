@@ -31,6 +31,11 @@ public class ExistsOneHas : Atom
 		return false;
 	}
 
+	public override INode DeepClone()
+	{
+		return new ExistsOneHas(propertyCheck, filter);
+	}
+
 	public override Atom Negate()
 	{
 		return new AllHave(new PropertyCheckers.Not(this.propertyCheck), this.filter);

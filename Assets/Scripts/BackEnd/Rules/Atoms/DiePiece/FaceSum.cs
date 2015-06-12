@@ -25,6 +25,11 @@ public class FaceSum : Atom
 		return countComparator.Compare(sum, amount);
 	}
 
+	public override INode DeepClone()
+	{
+		return new FaceSum(countComparator, amount);
+	}
+
 	public override Atom Negate()
 	{
 		return new FaceSum(countComparator.GetNegation(), amount);

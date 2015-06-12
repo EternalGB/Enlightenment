@@ -33,6 +33,11 @@ public class AllHave : Atom
 		return result;
 	}
 
+	public override INode DeepClone()
+	{
+		return new AllHave(propertyCheck, filter);
+	}
+
 	public override Atom Negate()
 	{
 		return new ExistsOneHas(new PropertyCheckers.Not(propertyCheck), this.filter);
