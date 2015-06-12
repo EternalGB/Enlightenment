@@ -15,7 +15,10 @@ public class Piece
 
 	public Piece(Piece old)
 	{
-		properties = new List<PropertyValuePair>(old.properties);
+		properties = new List<PropertyValuePair>();
+		foreach(PropertyValuePair pair in old.properties) {
+			properties.Add(new PropertyValuePair(pair.property, pair.value));
+		}
 	}
 
 	public List<PropertyValuePair>.Enumerator GetProperties()

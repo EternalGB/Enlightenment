@@ -45,14 +45,14 @@ public class ScreenSelectionController : MonoBehaviour
 	{
 
 		anim.gameObject.SetActive(true);
-		Debug.Log ("Opening " + anim.gameObject.name);
+		//Debug.Log ("Opening " + anim.gameObject.name);
 		anim.SetBool(paramName, true);
 		bool stateReached = false;
 		while(!stateReached) {
 			stateReached = anim.GetCurrentAnimatorStateInfo(0).IsName("Open");
 			yield return new WaitForEndOfFrame();
 		}
-		Debug.Log ("Opening animation finished");
+		//Debug.Log ("Opening animation finished");
 		open = anim;
 	}
 
@@ -66,14 +66,14 @@ public class ScreenSelectionController : MonoBehaviour
 
 	IEnumerator DoPanelClose(Animator anim)
 	{
-		Debug.Log ("Closing " + anim.gameObject.name);
+		//Debug.Log ("Closing " + anim.gameObject.name);
 		anim.SetBool(paramName, false);
 		bool stateReached = false;
 		while(!stateReached) {
 			stateReached = anim.GetCurrentAnimatorStateInfo(0).IsName("Closed");
 			yield return new WaitForEndOfFrame();
 		}
-		Debug.Log ("Closing animation finished");
+		//Debug.Log ("Closing animation finished");
 		anim.gameObject.SetActive(false);
 	}
 

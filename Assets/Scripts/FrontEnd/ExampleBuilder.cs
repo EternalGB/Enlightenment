@@ -9,12 +9,13 @@ public class ExampleBuilder : MonoBehaviour
 	public Piece heldPiece;
 	public int numPieces;
 	public GameController gc;
+	public ExampleList exampleList;
 	public int width, height;
 	public List<Image> boardPositions;
 	Board board;
 	int cursorX, cursorY;
 
-	Rule rule;
+
 
 	public List<RectTransform> verticalPieceGroups;
 
@@ -22,7 +23,7 @@ public class ExampleBuilder : MonoBehaviour
 	{
 		board = new Board(width, height);
 
-		rule = new Rule(new AllHave(new PropertyCheckers.DiePiece.FaceValue(new Comparers<int>.GreaterThan(),2)));
+
 	}
 
 	void RedrawBoard()
@@ -77,14 +78,10 @@ public class ExampleBuilder : MonoBehaviour
 		SetPiece(x,y, gc.CyclePiece(GetPiece(x,y)));
 	}
 
-	public bool EvaluateBoard()
-	{
-		return rule.Evaluate(board);
-	}
-
 	public void TestBoard()
 	{
-		Debug.Log(EvaluateBoard());
+		exampleList.AddExample(board);
+
 	}
 }
 

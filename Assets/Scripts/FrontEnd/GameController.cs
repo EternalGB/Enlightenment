@@ -6,11 +6,22 @@ public class GameController : MonoBehaviour
 
 	public TextAsset dictJson;
 	public PieceInfo pieceInfo;
+	Rule rule;
 
 	// Use this for initialization
 	void Awake ()
 	{
 		pieceInfo = new PieceInfo(dictJson.text);
+	}
+
+	void Start()
+	{
+		rule = new Rule(new AllHave(new PropertyCheckers.DiePiece.FaceValue(new Comparers<int>.GreaterThan(),2)));
+	}
+
+	public bool EvaluateExample(Board board)
+	{
+		return rule.Evaluate(board);
 	}
 
 	public Sprite GetPieceImage(Piece piece)
@@ -26,10 +37,5 @@ public class GameController : MonoBehaviour
 		return pieceInfo.CyclePiece(piece);
 	}
 
-	// Update is called once per frame
-	void Update ()
-	{
-	
-	}
 }
 

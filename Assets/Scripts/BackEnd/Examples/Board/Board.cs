@@ -23,6 +23,18 @@ public class Board
 		}
 	}
 
+	public Board(Board old)
+	{
+		width = old.width;
+		height = old.height;
+		pieces = new Piece[width, height];
+		for(int x = 0; x < width; x++) {
+			for(int y = 0; y < height; y++) {
+				pieces[x,y] = old.pieces[x,y] == null ? null : new Piece(old.pieces[x,y]);
+			}
+		}
+	}
+
 	public Piece GetPiece(int x, int y)
 	{
 		return pieces[x,y];
