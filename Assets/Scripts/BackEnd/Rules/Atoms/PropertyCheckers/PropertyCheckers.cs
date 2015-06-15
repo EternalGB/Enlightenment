@@ -18,6 +18,11 @@ public static class PropertyCheckers
 			return !child.Check(p);
 		}
 
+		public IPropertyChecker GetNegation()
+		{
+			return child;
+		}
+
 		public override string ToString ()
 		{
 			return string.Format ("NOT ({0})", child.ToString());
@@ -31,6 +36,11 @@ public static class PropertyCheckers
 		public bool Check(Piece p)
 		{
 			return true;
+		}
+
+		public IPropertyChecker GetNegation()
+		{
+			return new Not(this);
 		}
 
 		public override string ToString()
@@ -52,6 +62,11 @@ public static class PropertyCheckers
 		public bool Check(Piece p)
 		{
 			return p.GetPropertyValue(property).Equals(value);
+		}
+
+		public IPropertyChecker GetNegation()
+		{
+			return new Not(this);
 		}
 
 		public override string ToString ()
@@ -80,6 +95,11 @@ public static class PropertyCheckers
 			public bool Check(Piece p)
 			{
 				return comparer.Compare(ParseFaceValue(p.GetPropertyValue("Face")), amount);
+			}
+
+			public IPropertyChecker GetNegation()
+			{
+				return new Not(this);
 			}
 		}
 

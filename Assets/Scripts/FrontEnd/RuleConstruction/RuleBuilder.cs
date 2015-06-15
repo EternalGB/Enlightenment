@@ -79,6 +79,7 @@ public class RuleBuilder : MonoBehaviour
 			if(child.GetInstanceID() != contentArea.GetInstanceID())
 				Destroy(child.gameObject);
 		}
+		rule = null;
 	}
 
 	public void PrintRule()

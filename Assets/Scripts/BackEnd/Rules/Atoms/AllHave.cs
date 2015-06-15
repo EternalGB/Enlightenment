@@ -40,7 +40,7 @@ public class AllHave : Atom
 
 	public override Atom Negate()
 	{
-		return new ExistsOneHas(new PropertyCheckers.Not(propertyCheck), this.filter);
+		return new ExistsOneHas(propertyCheck.GetNegation(), this.filter);
 	}
 
 	public override string ToString ()

@@ -38,7 +38,7 @@ public class ExistsOneHas : Atom
 
 	public override Atom Negate()
 	{
-		return new AllHave(new PropertyCheckers.Not(this.propertyCheck), this.filter);
+		return new AllHave(propertyCheck.GetNegation(), this.filter);
 	}
 
 	public override string ToString ()

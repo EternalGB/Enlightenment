@@ -28,7 +28,11 @@ public class GameController : MonoBehaviour
 
 	public bool EvaluateRule(Rule rule)
 	{
-		return this.rule.Equals(rule);
+		Debug.Log (string.Format("Target Rule: {0}", this.rule));
+		Debug.Log (string.Format("Test Rule: {0}", rule));
+		Debug.Log (string.Format("Target Normal Form {0}", this.rule.ToNormalForm()));
+		Debug.Log (string.Format("Test Normal Form {0}", rule.ToNormalForm()));
+		return this.rule.ToNormalForm().Equals(rule.ToNormalForm());
 	}
 
 

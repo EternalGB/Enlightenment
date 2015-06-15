@@ -17,6 +17,8 @@ public class PropertyCheckSelector : MonoBehaviour, IPointerDownHandler, IPointe
 	public delegate void SelectedHandler(IPropertyChecker checker);
 	public event SelectedHandler OnCheckerSelected;
 
+	public NotPropertyToggle notToggle;
+
 	void Start()
 	{
 		gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -39,6 +41,17 @@ public class PropertyCheckSelector : MonoBehaviour, IPointerDownHandler, IPointe
 
 		}
 
+		/*
+		//add the negations of each property
+		for(int i = 0; i < checkers.Count; i++) {
+			IPropertyChecker check = new PropertyCheckers.Not(checkers[i]);
+			DropDownListItem listItem = Instantiate(listItemPrefab).GetComponent<DropDownListItem>();
+			listItem.transform.SetParent(dropDownList);
+			listItem.Init(this, check.ToString(), i);
+			
+		}
+		*/
+
 		dropDownList.gameObject.SetActive(false);
 
 		selectedItemIndex = -1;
@@ -58,9 +71,8 @@ public class PropertyCheckSelector : MonoBehaviour, IPointerDownHandler, IPointe
 	{
 		if(selectedItemIndex >= 0) {
 			selectedText.text = checkers[selectedItemIndex].ToString();
-			if(OnCheckerSelected != null)
-				OnCheckerSelected(checkers[selectedItemIndex]);
-			selectedItemIndex = -1;
+			UpdateSelectedChecker();
+			//selectedItemIndex = -1;
 		}
 		dropDownList.gameObject.SetActive(false);
 	}
@@ -70,5 +82,22 @@ public class PropertyCheckSelector : MonoBehaviour, IPointerDownHandler, IPointe
 		//have to have this here to intercept the up event when the drag ends
 	}
 
+	void UpdateSelectedChecker()
+	{
+		if(OnCheckerSelected != null) {
+			IPropertyChecker checker = checkers[selectedItemIndex];
+			if(notToggle.isNot)
+				checker = new PropertyCheckers.Not(checker);
+			OnCheckerSelected(checker);
+		}
+	}
+
+	public void ToggleNot()
+	{
+		notToggle.ToggleNot();
+		if(selectedItemIndex >= 0) {
+			UpdateSelectedChecker();
+		}
+	}
 }
 
