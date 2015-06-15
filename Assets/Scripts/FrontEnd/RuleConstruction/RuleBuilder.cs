@@ -89,8 +89,10 @@ public class RuleBuilder : MonoBehaviour
 
 	public void TestRule()
 	{
-		bool result = gc.EvaluateRule(rule);
 		string message;
+
+		bool result = gc.EvaluateRule(rule);
+
 		if(result) {
 			message = "Rule Correct! Good Job.";
 		} else {
