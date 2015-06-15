@@ -31,7 +31,7 @@ public class ExampleList : MonoBehaviour
 
 	public void UpdateFollows(float value)
 	{
-		float partition = 1/exampleDisplays.Count;
+		//float partition = 1/exampleDisplays.Count;
 		int index = Mathf.FloorToInt(value*exampleDisplays.Count);
 		if(index >= exampleDisplays.Count)
 			index = exampleDisplays.Count-1;
