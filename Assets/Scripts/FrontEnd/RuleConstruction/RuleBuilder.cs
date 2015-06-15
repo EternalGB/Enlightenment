@@ -71,6 +71,16 @@ public class RuleBuilder : MonoBehaviour
 			return null;
 	}
 
+	public void ClearConstructionArea()
+	{
+
+		Transform[] children = contentArea.GetComponentsInChildren<Transform>();
+		foreach(Transform child in children) {
+			if(child.GetInstanceID() != contentArea.GetInstanceID())
+				Destroy(child.gameObject);
+		}
+	}
+
 	public void PrintRule()
 	{
 		Debug.Log (rule.ToString());
