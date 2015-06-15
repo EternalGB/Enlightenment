@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 
+
 public interface INode
 {
 
@@ -15,6 +16,7 @@ public interface INode
 
 }
 
+[System.Serializable]
 public class Not : INode
 {
 
@@ -61,6 +63,7 @@ public class Not : INode
 
 }
 
+[System.Serializable]
 public class And : INode
 {
 
@@ -115,6 +118,7 @@ public class And : INode
 
 }
 
+[System.Serializable]
 public class Or : INode
 {
 
@@ -169,6 +173,7 @@ public class Or : INode
 
 }
 
+[System.Serializable]
 public abstract class Atom : INode
 {
 

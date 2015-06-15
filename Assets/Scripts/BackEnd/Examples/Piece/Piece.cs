@@ -8,6 +8,8 @@ public class Piece
 	[SerializeField]
 	private List<PropertyValuePair> properties;
 
+	public static readonly Piece Empty = new Piece();
+
 	public Piece()
 	{
 		properties = new List<PropertyValuePair>();
@@ -59,9 +61,9 @@ public class Piece
 
 	public override string ToString ()
 	{
-		string output = "Piece:";
+		string output = "Piece \n";
 		foreach(PropertyValuePair pair in properties) {
-			output += pair.ToString() + "\n";
+			output += "\t" + pair.ToString() + "\n";
 		}
 		return output;
 	}
@@ -71,6 +73,7 @@ public class Piece
 		Piece other = obj as Piece;
 		if(other == null)
 			return false;
+		Debug.Log(string.Format("Checkings equals: {0} and {1}",this,other));
 		if(other.properties.Count != this.properties.Count)
 			return false;
 		foreach(PropertyValuePair pair in this.properties) {
@@ -88,6 +91,7 @@ public class Piece
 		//may cause collisions though?
 		int hash = 0;
 		foreach(PropertyValuePair pair in properties) {
+			Debug.Log ("Generating hash for " + pair.ToString());
 			hash += pair.GetHashCode();
 		}
 		return hash;
@@ -117,11 +121,15 @@ public class Piece
 			if(!obj.GetType().IsAssignableFrom(typeof(PropertyValuePair)))
 				return false;
 			PropertyValuePair other = (PropertyValuePair)obj;
+			if(property == null || value == null || other.property == null || other.value == null)
+				return false;
 			return property.Equals(other.property) && value.Equals(other.value);
 		}
 
 		public override int GetHashCode ()
 		{
+			if(property == null || value == null)
+				return 0;
 			int hash = 17;
 			hash = hash*23 + property.GetHashCode();
 			hash = hash*23 + value.GetHashCode();

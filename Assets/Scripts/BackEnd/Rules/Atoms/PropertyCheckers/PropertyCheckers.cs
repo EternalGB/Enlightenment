@@ -3,6 +3,7 @@ using System;
 public static class PropertyCheckers
 {
 
+	[System.Serializable]
 	public struct Not : IPropertyChecker
 	{
 
@@ -30,6 +31,7 @@ public static class PropertyCheckers
 
 	}
 
+	[System.Serializable]
 	public struct Identity : IPropertyChecker
 	{
 
@@ -49,6 +51,7 @@ public static class PropertyCheckers
 		}
 	}
 
+	[System.Serializable]
 	public struct PropertyHasValue : IPropertyChecker
 	{
 		string property, value;
@@ -81,6 +84,7 @@ public static class PropertyCheckers
 	public static class DiePiece
 	{
 
+		[System.Serializable]
 		public struct FaceValue : IPropertyChecker
 		{
 			IComparer<int> comparer;

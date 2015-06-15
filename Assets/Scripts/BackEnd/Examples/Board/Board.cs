@@ -2,10 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System;
 
+[System.Serializable]
 public class Board
 {
-	
+
+	[SerializeField]
 	protected int width, height;
+	[SerializeField]
 	protected Piece[,] pieces;
 
 	public int Width { get{ return width;}}
@@ -86,6 +89,25 @@ public class Board
 			}
 		}
 		return count;
+	}
+
+	public override bool Equals (object obj)
+	{
+		Board other = obj as Board;
+		if(other == null)
+			return false;
+		if(other.width != width || other.height != height)
+			return false;
+		for(int x = 0; x < width; x++) {
+			for(int y = 0; y < height; y++) {
+				if(pieces[x,y] == null) {
+					if(other.pieces[x,y] != null)
+						return false;
+				} else if(!pieces[x,y].Equals(other.pieces[x,y]))
+					return false;
+			}
+		}
+		return true;
 	}
 
 	public override string ToString ()
