@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 	public PieceInfo pieceInfo;
 	Rule rule;
 
+
+
 	// Use this for initialization
 	void Awake ()
 	{
@@ -16,13 +18,20 @@ public class GameController : MonoBehaviour
 
 	void Start()
 	{
-		rule = new Rule(new AllHave(new PropertyCheckers.DiePiece.FaceValue(new Comparers<int>.GreaterThan(),2)));
+		rule = new Rule(new AllHave(new PropertyCheckers.PropertyHasValue("Colour", "Blue")));
 	}
 
 	public bool EvaluateExample(Board board)
 	{
 		return rule.Evaluate(board);
 	}
+
+	public bool EvaluateRule(Rule rule)
+	{
+		return this.rule.Equals(rule);
+	}
+
+
 
 	public Sprite GetPieceImage(Piece piece)
 	{

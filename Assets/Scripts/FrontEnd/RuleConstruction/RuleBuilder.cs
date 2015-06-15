@@ -75,5 +75,18 @@ public class RuleBuilder : MonoBehaviour
 	{
 		Debug.Log (rule.ToString());
 	}
+
+	public void TestRule()
+	{
+		bool result = gc.EvaluateRule(rule);
+		string message;
+		if(result) {
+			message = "Rule Correct! Good Job.";
+		} else {
+			message = "Rule Does Not Match. Try Again";
+		}
+		ScreenSelectionController screenCont = GameObject.FindGameObjectWithTag("ScreenController").GetComponent<ScreenSelectionController>();
+		screenCont.DisplayMessage(message,screenCont.HideMessage);
+	}
 }
 

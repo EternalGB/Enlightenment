@@ -15,6 +15,8 @@ public class ScreenSelectionController : MonoBehaviour
 
 	bool swapping = false;
 
+	public DialogueWindow dialWindow;
+
 	public void OnEnable()
 	{
 		if(initiallyOpen != null)
@@ -75,6 +77,16 @@ public class ScreenSelectionController : MonoBehaviour
 		}
 		//Debug.Log ("Closing animation finished");
 		anim.gameObject.SetActive(false);
+	}
+
+	public void DisplayMessage(string message, UnityEngine.Events.UnityAction callback)
+	{
+		dialWindow.DisplayMessage(message, callback);
+	}
+
+	public void HideMessage()
+	{
+		dialWindow.gameObject.SetActive(false);
 	}
 
 }

@@ -26,6 +26,7 @@ public class ExampleList : MonoBehaviour
 		exampleDisplays.Add(de);
 		scrollBar.numberOfSteps = exampleDisplays.Count;
 		scrollBar.value = 1;
+		scrollBar.onValueChanged.Invoke(scrollBar.value);
 	}
 
 	public void UpdateFollows(float value)
