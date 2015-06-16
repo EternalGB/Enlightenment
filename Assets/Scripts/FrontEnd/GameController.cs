@@ -16,9 +16,9 @@ public class GameController : MonoBehaviour
 		pieceInfo = new PieceInfo(dictJson.text);
 	}
 
-	void Start()
+	public void SetRule(Rule rule)
 	{
-		rule = new Rule(new AllHave(new PropertyCheckers.PropertyHasValue("Colour", "Blue")));
+		this.rule = rule;
 	}
 
 	public bool EvaluateExample(Board board)

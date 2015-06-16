@@ -25,6 +25,16 @@ public class DisplayExample : MonoBehaviour
 		return evaluation;
 	}
 
+	public bool BoardEquals(Board board)
+	{
+		return this.board.Equals(board);
+	}
+
+	public Board GetBoard()
+	{
+		return new Board(board);
+	}
+
 
 }
 

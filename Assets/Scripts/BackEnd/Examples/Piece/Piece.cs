@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using LitJson;
 
 [System.Serializable]
 public class Piece
@@ -73,7 +74,7 @@ public class Piece
 		Piece other = obj as Piece;
 		if(other == null)
 			return false;
-		Debug.Log(string.Format("Checkings equals: {0} and {1}",this,other));
+		//Debug.Log(string.Format("Checkings equals: {0} and {1}",this,other));
 		if(other.properties.Count != this.properties.Count)
 			return false;
 		foreach(PropertyValuePair pair in this.properties) {
@@ -91,10 +92,19 @@ public class Piece
 		//may cause collisions though?
 		int hash = 0;
 		foreach(PropertyValuePair pair in properties) {
-			Debug.Log ("Generating hash for " + pair.ToString());
+			//Debug.Log ("Generating hash for " + pair.ToString());
 			hash += pair.GetHashCode();
 		}
 		return hash;
+	}
+
+	public static Piece FromJson(JsonData properties)
+	{
+		Piece piece = new Piece();
+		foreach(string property in properties.Keys) {
+			piece.AddProperty(property, (string)properties[property]);
+		}
+		return piece;
 	}
 
 	public static Piece DiePiece(string face, string colour)
@@ -104,6 +114,8 @@ public class Piece
 		piece.AddProperty("Colour", colour);
 		return piece;
 	}
+
+
 
 	[System.Serializable]
 	public struct PropertyValuePair

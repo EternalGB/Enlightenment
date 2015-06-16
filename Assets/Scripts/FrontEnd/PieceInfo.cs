@@ -28,10 +28,7 @@ public class PieceInfo
 		}
 		JsonData pieces = data["Pieces"];
 		for(int i = 0; i < pieces.Count; i++) {
-			Piece next = new Piece();
-			foreach(string property in pieces[i]["Properties"].Keys) {
-				next.AddProperty(property, (string)pieces[i]["Properties"][property]);
-			}
+			Piece next = Piece.FromJson(pieces[i]["Properties"]);
 			string imageName = (string)(pieces[i]["ImageName"]);
 			int index = (int)pieces[i]["SpriteIndex"];
 			//Debug.Log (string.Format("{0}\t adding {1}_{2}",next, imageName, index));

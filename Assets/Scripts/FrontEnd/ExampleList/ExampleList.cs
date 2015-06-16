@@ -17,6 +17,15 @@ public class ExampleList : MonoBehaviour
 		scrollBar.onValueChanged.AddListener(UpdateFollows);
 	}
 
+	public bool ContainsExample(Board board)
+	{
+		foreach(DisplayExample example in exampleDisplays) {
+			if(example.BoardEquals(board))
+				return true;
+		}
+		return false;
+	}
+
 	public void AddExample(Board board)
 	{
 		GameObject newExample = (GameObject)Instantiate(examplePrefab);
@@ -36,6 +45,26 @@ public class ExampleList : MonoBehaviour
 		if(index >= exampleDisplays.Count)
 			index = exampleDisplays.Count-1;
 		followsDisplay.SetFollows(exampleDisplays[index].GetEvaluation());
+	}
+
+	public void ClearExampleList()
+	{
+		
+		Transform[] children = examplesContainer.GetComponentsInChildren<Transform>(true);
+		foreach(Transform child in children) {
+			if(child.GetInstanceID() != examplesContainer.GetInstanceID())
+				Destroy(child.gameObject);
+		}
+		exampleDisplays = new List<DisplayExample>();
+	}
+
+	public List<Board> GetExamples()
+	{
+		List<Board> examples = new List<Board>();
+		foreach(DisplayExample de in exampleDisplays) {
+			examples.Add(de.GetBoard());
+		}
+		return examples;
 	}
 
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using LitJson;
 
 [System.Serializable]
 public class Board
@@ -110,6 +111,19 @@ public class Board
 		return true;
 	}
 
+	public override int GetHashCode ()
+	{
+		//TODO re-examine
+		int hash = 0;
+		for(int x = 0; x < width; x++) {
+			for(int y = 0; y < height; y++) {
+				if(pieces[x,y] != null) 
+					hash += pieces[x,y].GetHashCode();
+			}
+		}
+		return hash;
+	}
+
 	public override string ToString ()
 	{
 		string output = "";
@@ -119,6 +133,19 @@ public class Board
 			}
 		}
 		return output;
+	}
+
+	public static Board FromJson(JsonData pieces)
+	{
+		//TODO hard coded board stuff here
+		Board board = new Board(3,3);
+		for(int i = 0; i < pieces.Count; i++) {
+			JsonData pieceJson = pieces[i];
+			int x = (int)pieceJson["x"];
+			int y = (int)pieceJson["y"];
+			board.SetPiece(x,y,Piece.FromJson(pieceJson["Properties"]));
+		}
+		return board;
 	}
 
 }

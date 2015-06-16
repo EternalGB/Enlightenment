@@ -1,0 +1,133 @@
+{
+  "Puzzles" :
+  [
+    {
+      "Name" : "First",
+      "RuleKey" : "Dice1",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Second",
+      "RuleKey" : "Dice2",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "White"
+          }
+        }
+      ]
+    }
+  ]
+}

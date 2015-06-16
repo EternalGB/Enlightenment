@@ -23,6 +23,7 @@ public class ExampleSerializationTest : MonoBehaviour
 		ms.Seek(0, SeekOrigin.Begin);
 
 		Board board2 = (Board)serializer.Deserialize(ms);
+		Debug.Log (board2.ToString());
 		Debug.Log (board.Equals(board2));
 	}
 	
