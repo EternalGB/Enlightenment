@@ -17,6 +17,8 @@ public class PuzzleList : MonoBehaviour
 	List<Puzzle> puzzles;
 	Puzzle currentPuzzle = null;
 
+	Dictionary<string, bool> completedDict;
+
 	void OnEnable()
 	{
 		ClearPuzzleArea();
@@ -42,7 +44,7 @@ public class PuzzleList : MonoBehaviour
 
 			el.ClearExampleList();
 
-			gc.SetRule(puzzleRefCopy.rule);
+			gc.SetPuzzle(puzzleRefCopy);
 			List<Board> testedExamples = puzzleRefCopy.LoadProgress();
 			foreach(Board board in testedExamples) {
 				el.AddExample(board);
@@ -84,6 +86,7 @@ public class PuzzleList : MonoBehaviour
 			puzzles.Add(puzzle);
 		}
 	}
+
 
 
 }

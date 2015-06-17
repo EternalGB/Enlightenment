@@ -11,8 +11,7 @@ public class Puzzle
 	public string puzzleName;
 	public Rule rule;
 	public Board example1, example2;
-	//public List<Board> testedExamples;
-	public bool solved;
+	public bool completed;
 
 	static string dir = Application.persistentDataPath + Path.DirectorySeparatorChar + "Tested";
 	static string pathPrefix = dir + Path.DirectorySeparatorChar;
@@ -28,27 +27,43 @@ public class Puzzle
 			Directory.CreateDirectory(dir);
 		Stream fileStream = File.Create(fileName);
 		BinaryFormatter serializer = new BinaryFormatter();
-		serializer.Serialize(fileStream, testedExamples);
+		serializer.Serialize(fileStream, new PuzzleProgress(testedExamples, completed));
 		fileStream.Close();
 	}
 
 	public List<Board> LoadProgress()
 	{
-		List<Board> testedExamples;
+		PuzzleProgress progress;
 		try {
 			string fileName = pathPrefix + puzzleName;
 			Stream fileStream = File.Open(fileName, FileMode.Open);
 			Debug.Log (string.Format("Loading {0} progress from {1}",puzzleName,fileName));
 			BinaryFormatter serializer = new BinaryFormatter();
-			testedExamples = (List<Board>)serializer.Deserialize(fileStream);
+			progress = (PuzzleProgress)serializer.Deserialize(fileStream);
 			fileStream.Close();
 		} catch {
-			testedExamples = new List<Board>();
+			progress = new PuzzleProgress();
+			progress.completed = false;
+			progress.testedExamples = new List<Board>();
 			//do nothing
 		}
-		return testedExamples;
+		return progress.testedExamples;
 	}
 
+	[System.Serializable]
+	public struct PuzzleProgress
+	{
+
+		public List<Board> testedExamples;
+		public bool completed;
+
+		public PuzzleProgress(List<Board> testedExamples, bool completed)
+		{
+			this.testedExamples = testedExamples;
+			this.completed = completed;
+		}
+
+	}
 
 
 
