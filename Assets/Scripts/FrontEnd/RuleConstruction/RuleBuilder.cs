@@ -6,6 +6,7 @@ public class RuleBuilder : MonoBehaviour
 {
 
 	public GameController gc;
+	public ExampleList el;
 	public Animator puzzleSelect;
 	public GameObject heldBlockPrefab;
 	public RectTransform contentArea;
@@ -98,7 +99,14 @@ public class RuleBuilder : MonoBehaviour
 			message = "Rule Correct! Good Job.";
 			screenCont.DisplayMessage(message,SetPuzzleComplete(screenCont, gc));
 		} else {
-			message = "Rule Does Not Match. Try Again";
+			List<Board> testedExamples = el.GetExamples();
+			int totalExamples = testedExamples.Count;
+			int numMatching = 0;
+			foreach(Board board in testedExamples) {
+				if(gc.EvaluateExample(board) == rule.Evaluate(board))
+					numMatching++;
+			}
+			message = string.Format ("Rule Incorrect. Agreed with solution on {0}/{1} tested examples. Try Again",numMatching,totalExamples);
 			screenCont.DisplayMessage(message,screenCont.HideMessage);
 		}
 
