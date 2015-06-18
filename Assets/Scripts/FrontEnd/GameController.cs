@@ -54,5 +54,17 @@ public class GameController : MonoBehaviour
 		return pieceInfo.CyclePiece(piece);
 	}
 
+	public void SetPuzzleCompleted()
+	{
+		puzzle.completed = true;
+		puzzle.SaveProgress();
+	}
+
+
+	public void AddTestedExample(Board board)
+	{
+		puzzle.AddTestedExample(board);
+	}
+
 }
 

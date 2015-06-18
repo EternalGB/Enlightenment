@@ -128,6 +128,518 @@
           }
         }
       ]
+    },
+    {
+      "Name" : "Third",
+      "RuleKey" : "Dice3",
+      "Example1" :
+      [
+        {
+          "x" : 2,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "White"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Fourth",
+      "RuleKey" : "Dice4",
+      "Example1" :
+      [
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Three",
+            "Colour" : "White"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 2,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Fifth",
+      "RuleKey" : "Dice5",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Sixth",
+      "RuleKey" : "Dice6",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "White"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Seventh",
+      "RuleKey" : "Dice7",
+      "Example1" :
+      [
+        {
+          "x" : 2,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Eighth",
+      "RuleKey" : "Dice8",
+      "Example1" :
+      [
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 0,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Black"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Three",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "White"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Nineth",
+      "RuleKey" : "Dice9",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 0,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Red"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Four",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Blue"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "Blue"
+          }
+        }
+      ]
+    },
+    {
+      "Name" : "Tenth",
+      "RuleKey" : "Dice10",
+      "Example1" :
+      [
+        {
+          "x" : 0,
+          "y" : 0,
+          "Properties" :
+          {
+            "Face" : "One",
+            "Colour" : "White"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Two",
+            "Colour" : "Red"
+          }
+        },
+        {
+          "x" : 0,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "White"
+          }
+        }
+      ],
+      "Example2" :
+      [
+        {
+          "x" : 0,
+          "y" : 1,
+          "Properties" :
+          {
+            "Face" : "Three",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 1,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Six",
+            "Colour" : "Black"
+          }
+        },
+        {
+          "x" : 2,
+          "y" : 2,
+          "Properties" :
+          {
+            "Face" : "Five",
+            "Colour" : "Black"
+          }
+        }
+      ]
     }
   ]
 }

@@ -11,12 +11,13 @@ public class Puzzle
 	public string puzzleName;
 	public Rule rule;
 	public Board example1, example2;
+	public List<Board> testedExamples;
 	public bool completed;
 
 	static string dir = Application.persistentDataPath + Path.DirectorySeparatorChar + "Tested";
 	static string pathPrefix = dir + Path.DirectorySeparatorChar;
 
-	public void SaveProgress(List<Board> testedExamples)
+	public void SaveProgress()
 	{
 
 		string fileName = pathPrefix + puzzleName;
@@ -31,7 +32,7 @@ public class Puzzle
 		fileStream.Close();
 	}
 
-	public List<Board> LoadProgress()
+	public void LoadProgress()
 	{
 		PuzzleProgress progress;
 		try {
@@ -47,7 +48,15 @@ public class Puzzle
 			progress.testedExamples = new List<Board>();
 			//do nothing
 		}
-		return progress.testedExamples;
+		completed = progress.completed;
+		testedExamples = progress.testedExamples;
+	}
+
+	public void AddTestedExample(Board board)
+	{
+		if(testedExamples == null)
+			testedExamples = new List<Board>();
+		testedExamples.Add(board);
 	}
 
 	[System.Serializable]

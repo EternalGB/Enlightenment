@@ -33,9 +33,11 @@ public class ExampleList : MonoBehaviour
 		de.SetDisplay(gc, board);
 		newExample.transform.SetParent(examplesContainer);
 		exampleDisplays.Add(de);
+
 		scrollBar.numberOfSteps = exampleDisplays.Count;
 		scrollBar.value = 1;
 		scrollBar.onValueChanged.Invoke(scrollBar.value);
+
 	}
 
 	public void UpdateFollows(float value)

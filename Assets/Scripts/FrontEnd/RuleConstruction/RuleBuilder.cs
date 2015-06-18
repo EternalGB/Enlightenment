@@ -6,6 +6,7 @@ public class RuleBuilder : MonoBehaviour
 {
 
 	public GameController gc;
+	public Animator puzzleSelect;
 	public GameObject heldBlockPrefab;
 	public RectTransform contentArea;
 	[SerializeField]
@@ -92,14 +93,28 @@ public class RuleBuilder : MonoBehaviour
 		string message;
 
 		bool result = gc.EvaluateRule(rule);
-
+		ScreenSelectionController screenCont = GameObject.FindGameObjectWithTag("ScreenController").GetComponent<ScreenSelectionController>();
 		if(result) {
 			message = "Rule Correct! Good Job.";
+			screenCont.DisplayMessage(message,SetPuzzleComplete(screenCont, gc));
 		} else {
 			message = "Rule Does Not Match. Try Again";
+			screenCont.DisplayMessage(message,screenCont.HideMessage);
 		}
-		ScreenSelectionController screenCont = GameObject.FindGameObjectWithTag("ScreenController").GetComponent<ScreenSelectionController>();
-		screenCont.DisplayMessage(message,screenCont.HideMessage);
+
 	}
+
+	UnityEngine.Events.UnityAction SetPuzzleComplete(ScreenSelectionController screenCont, GameController gc)
+	{
+		GameController gcc = gc;
+		ScreenSelectionController ssc = screenCont;
+		return () => 
+		{
+			gcc.SetPuzzleCompleted();
+			ssc.HideMessage();
+			ssc.SwapTo(puzzleSelect);
+		};
+	}
+
 }
 

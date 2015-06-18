@@ -81,7 +81,7 @@ public class ExampleBuilder : MonoBehaviour
 	public void TestBoard()
 	{
 		exampleList.AddExample(board);
-
+		gc.AddTestedExample(board);
 	}
 }
 

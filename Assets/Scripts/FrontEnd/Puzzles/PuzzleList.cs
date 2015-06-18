@@ -22,13 +22,15 @@ public class PuzzleList : MonoBehaviour
 	void OnEnable()
 	{
 		ClearPuzzleArea();
-		LoadFromJson(jsonFile.text);
+		if(puzzles == null)
+			LoadFromJson(jsonFile.text);
 		foreach(Puzzle puzzle in puzzles) {
-
+			puzzle.LoadProgress();
 			GameObject button = (GameObject)Instantiate(puzzleButtonPrefab);
 			button.transform.SetParent(puzzleArea);
 			button.GetComponentInChildren<Text>().text = puzzle.puzzleName;
 			button.GetComponent<Button>().onClick.AddListener(StartPuzzle(puzzle));
+			button.transform.FindChild("Completed").gameObject.SetActive(puzzle.completed);
 		}
 	}
 
@@ -39,13 +41,14 @@ public class PuzzleList : MonoBehaviour
 		return () =>
 		{
 			if(currentPuzzle != null)
-				currentPuzzle.SaveProgress(el.GetExamples());
+				currentPuzzle.SaveProgress();
 
 
 			el.ClearExampleList();
 
 			gc.SetPuzzle(puzzleRefCopy);
-			List<Board> testedExamples = puzzleRefCopy.LoadProgress();
+			//puzzleRefCopy.LoadProgress();
+			List<Board> testedExamples = puzzleRefCopy.testedExamples;
 			foreach(Board board in testedExamples) {
 				el.AddExample(board);
 			}
