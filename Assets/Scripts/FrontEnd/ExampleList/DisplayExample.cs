@@ -8,6 +8,12 @@ public class DisplayExample : MonoBehaviour
 	public List<Image> boardPositions;
 	Board board;
 	bool evaluation;
+    LayoutElement layout;
+
+    void OnEnable()
+    {
+        layout = GetComponent<LayoutElement>();
+    }
 
 	public void SetDisplay(GameController gc, Board board)
 	{
@@ -19,6 +25,13 @@ public class DisplayExample : MonoBehaviour
 			}
 		}
 	}
+
+    public void SetSize(Rect parentRect)
+    {
+        layout.preferredWidth = parentRect.width;
+        layout.preferredHeight = parentRect.height;
+        Debug.Log("Setting example size to " + parentRect.width + ", " + parentRect.height);
+    }
 
 	public bool GetEvaluation()
 	{

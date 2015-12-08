@@ -7,13 +7,18 @@ public class ExampleList : MonoBehaviour
 
 	public GameController gc;
 	public RectTransform examplesContainer;
+    public ScrollRect scrollRect;
 	public Scrollbar scrollBar;
 	public FollowsDisplay followsDisplay;
 	public GameObject examplePrefab;
 	public List<DisplayExample> exampleDisplays;
+    ScreenController sc;
+    bool listDirty = false;
 
 	void Start()
 	{
+        sc = GetComponent<ScreenController>();
+        sc.OnOpenComplete += sc_OnOpenComplete;
 		scrollBar.onValueChanged.AddListener(UpdateFollows);
 	}
 
@@ -31,14 +36,33 @@ public class ExampleList : MonoBehaviour
 		GameObject newExample = (GameObject)Instantiate(examplePrefab);
 		DisplayExample de = newExample.GetComponent<DisplayExample>();
 		de.SetDisplay(gc, board);
-		newExample.transform.SetParent(examplesContainer);
+		//newExample.transform.SetParent(examplesContainer);
+        //de.SetSize(scrollRect.rect);
 		exampleDisplays.Add(de);
-
-		scrollBar.numberOfSteps = exampleDisplays.Count;
-		scrollBar.value = 1;
-		scrollBar.onValueChanged.Invoke(scrollBar.value);
-
+        listDirty = true;
+        Debug.Log("Adding example to list");
 	}
+
+    void sc_OnOpenComplete()
+    {
+        Debug.Log("Doing open complete. Dirty list ? " + listDirty);
+        if(listDirty)
+        {
+            int start = scrollBar.numberOfSteps;
+            for(int i = start; i < exampleDisplays.Count; i++)
+            {
+                DisplayExample de = exampleDisplays[i];
+                de.GetComponent<RectTransform>().SetParent(examplesContainer);
+                de.SetSize(scrollRect.GetComponent<RectTransform>().rect);
+            }
+
+            scrollBar.numberOfSteps = exampleDisplays.Count;
+            scrollRect.horizontalNormalizedPosition = 1f;
+            scrollBar.onValueChanged.Invoke(scrollBar.value);
+
+            listDirty = false;
+        }
+    }
 
 	public void UpdateFollows(float value)
 	{
@@ -58,6 +82,7 @@ public class ExampleList : MonoBehaviour
 				Destroy(child.gameObject);
 		}
 		exampleDisplays = new List<DisplayExample>();
+        scrollBar.numberOfSteps = 0;
 	}
 
 	public List<Board> GetExamples()

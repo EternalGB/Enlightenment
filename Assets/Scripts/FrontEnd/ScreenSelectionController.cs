@@ -56,6 +56,11 @@ public class ScreenSelectionController : MonoBehaviour
 		}
 		//Debug.Log ("Opening animation finished");
 		open = anim;
+        ScreenController sc;
+        if (sc = open.GetComponent<ScreenController>())
+        {
+            sc.DoOpen();
+        }
 	}
 
 	IEnumerator CloseCurrent()
@@ -63,6 +68,11 @@ public class ScreenSelectionController : MonoBehaviour
 		if(open != null) {
 			yield return StartCoroutine(DoPanelClose(open));
 			previous = open;
+            ScreenController sc;
+            if (sc = previous.GetComponent<ScreenController>())
+            {
+                sc.DoClose();
+            }
 		}
 	}
 
